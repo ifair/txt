@@ -18,4 +18,24 @@ window.addEventListener('popState',(e)=>{
      }
      );
 },false)
+<h4>hash</h4>
+</script>
+
+<a class="qapi">d.html</a>
+<a class="qapi">e.html</a>
+<script type="text/javascript">
+console.log('11');
+     document.querySelectorAll('.qapi').forEach((item)=>{
+       item.addEventListener('click',(e)=>{
+         e.preventDefault();
+         let link = item.link;
+         location.hash = item.textContent;
+       },false)
+     });
+
+     window.addEventListener("hashchange",(e)=>{
+       console.log({
+         href:location.href,
+       });
+     })
 </script>
